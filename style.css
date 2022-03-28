@@ -57,6 +57,7 @@ input[type=login] {
     border: none;
     padding-left: 15px;
     font-weight: bold;
+    color: white;
 }
 
 input[type=login]:focus {
@@ -68,6 +69,7 @@ input[type=login]:focus {
     outline: none;
     color: rgba(165, 160, 160, 0.911);
     padding-left: 15px;
+    border-bottom: 1px solid rgba(255, 208, 0, 0.767);
 }
 
 .icon-user {
@@ -81,11 +83,14 @@ input[type=login]:focus {
     background-color: rgba(0, 0, 0, 0.116);
 }
 
+#ilogin {
+    margin-left: 40px;
+}
+
 section.password {
     width: 240px;
     height: 70px;
     background-color: rgba(0, 0, 0, 0);
-    padding-left: 30px;
     display: flex;
 }
 
@@ -98,17 +103,23 @@ input[type=password] {
     border: none;
     padding-left: 15px;
     font-weight: bold;
+    color: white;
 }
 
 input[type=password]:focus {
     margin-top: 10px;
-    width: 175px;
+    width: 174px;
     height: 50px;
     background-color: rgba(0, 0, 0, 0.116);
     margin-left: 10px;
     outline: none;
     color: rgba(165, 160, 160, 0.911);
     padding-left: 15px;
+    border-bottom: 1px solid rgba(255, 208, 0, 0.767);
+}
+
+#password {
+    margin-left: 40px;
 }
 
 .icon-asterisk {
