@@ -32,54 +32,22 @@ const checkPassword = () => {
     }
 }
 
-const checkForm = () => {
-    checkLogin();
-    checkPassword();
+
+login.addEventListener('click', checkLogin);
+password.addEventListener('click', checkPassword);
+
+const getCommentsIds = (comments) => {
+    return comments.map((comment) => comment.postId);
+};
+
+const incrementCommentsIds = (comments) => {
+    
 }
 
-button.addEventListener('click', checkForm);
+fetch('https://jsonplaceholder.typicode.com/comments')
+.then((res) => res.json())
+.then(comments => {
+    console.log(getCommentsIds(comments));
+});
 
-
-
-
-
-
-
-
-// const loginInput = document.getElementById('login');
-// const passwordInput = document.getElementById('password');
-
-// loginInput.addEventListener('submit', e => {
-//     e.preventDefault();
-
-//     if(loginInput.value.length <= 0) {
-//         alert('Uzupelnij login');
-//     }
-//     else {
-//         e.target.submit();
-//     }
-// })
-
-// function isFilled(input) {
-//     if(loginInput.value == "") {
-//        document.getElementById("ilogin").innerHTML = "uzupełnij";
-//         return false;
-//     }
-//     else {
-//         return true;
-//     }
-// }
-
-
-
-// window.onload = function () {
-//     document.getElementById("article").onsubmit = function () {
-//         if (isFilled(this.name)) {
-//             return false;
-//         }
-//         else {
-//             return true;
-//         }
-
-//     }
 
