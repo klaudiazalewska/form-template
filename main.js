@@ -38,8 +38,13 @@ const getCommentsIds = (comments) => {
 };
 
 const incrementCommentsIds = (comments) => {
-    let comment = comments[i];
-    let newValue = `${comment} + ${[i]}`;
+    let commentsList = comments.map((comment) => comment.postId);
+    for (comment of commentsList) {
+        for (let i=0; i <= commentsList.length; i++) {
+            let newVaule = `${comment} + ${[i]}`;
+            return newVaule;
+        }
+    }
     }
 
 
@@ -47,7 +52,6 @@ fetch('https://jsonplaceholder.typicode.com/comments')
 .then((res) => res.json())
 .then(comments => {
     console.log(getCommentsIds(comments));
-    console.log(incrementCommentsIds(comments));
 });
 
 
