@@ -11,6 +11,7 @@ article {
     margin-left: 800px;
     margin-top: 70px;
     background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
 }
 
 section.title {
